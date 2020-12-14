@@ -1,0 +1,28 @@
+/*
+* Author: Ozair Ashfaq
+* Date: 13/12/2020
+* index.css
+*/
+
+/* CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#nav-home-page {
+    background: var(--bg-tertiary);
+}
+
+#home-selected {
+    height: 100%;
+    width: 0.2rem;
+    min-width: 0.2rem;
+    margin-left: -0.2rem;
+    background: var(--theme-primary);
+}
+
+.custom-navbar:hover #home-selected {
+    margin-left: auto;
+}
