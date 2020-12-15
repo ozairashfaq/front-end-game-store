@@ -1,0 +1,279 @@
+/*
+* Author: Ozair Ashfaq
+* Date: 13/12/2020
+* index.css
+*/
+
+/* CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#nav-home-page {
+    background: var(--bg-tertiary);
+}
+
+#home-selected {
+    height: 100%;
+    width: 0.2rem;
+    min-width: 0.2rem;
+    margin-left: -0.2rem;
+    background: var(--theme-primary);
+}
+
+.custom-navbar:hover #home-selected {
+    margin-left: auto;
+}
+
+#user-icon {
+    border-radius: 50%;
+    border-color: var(--text-primary);
+    border-style: solid;
+    border-width: 0.15rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    text-align: center;
+    background-color: var(--bg-secondary);
+}
+
+#user-icon img{
+    height: 100%;
+    width: 100%;
+    color:var(--theme-primary);
+}
+
+#language-icon {
+    border-radius: 50%;
+    height: 2.5rem;
+    width: 2.5rem;
+    text-align: center;
+    background-color: var(--bg-secondary);
+}
+
+#language-icon svg{
+    height: 100%;
+    width: 100%;
+    color:var(--theme-primary);
+}
+
+.dropdown-menu, .dropdown-item {
+    font-size: 14px;
+    color:var(--theme-primary);
+    background-color: var(--bg-secondary);
+}
+
+.top-store-links{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 2rem;
+}
+
+.top-store-links a {
+    color: var(--theme-primary);
+    text-decoration: none;
+}
+
+.top-store-links a:last-child {
+    color: var(--bg-tertiary);
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+.store-carousel{
+    background-color: var(--bg-secondary);
+    display: flex;
+    flex-direction: row;
+}
+
+.carousel {
+    max-width: 80%;
+}
+
+.carousel-inner img{
+    height: 37.1rem;
+}
+
+.carousel-control-prev {
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 40%;
+}
+
+.carousel-control-next {
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 40%;
+}
+
+.carousel-side-bar {
+    width: 20%;
+    background-color: var(--bg-secondary);
+}
+
+.carousel-side-bar-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.carousel-side-bar-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.carousel-side-bar-item:hover {
+    background-color: var(--bg-tertiary);
+}
+
+.carousel-side-bar-item img{
+    height: 85px;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.carousel-side-bar-item p span {
+    font-size: 14px;
+    font-weight: 400;
+    display: block;
+    color: var(--text-primary);
+}
+
+.carousel-side-bar-break {
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    border: 0.5px solid var(--text-primary);
+}
+
+.carousel-side-bar-last-item img{
+    margin-top: 1rem;
+}
+
+.carousel-caption {
+    text-align: left;
+    bottom: 2rem;
+    left: 4.5rem;
+    top: auto;
+    right: auto;
+    background-color: #18181a2c;
+    box-shadow: 0 0 5px 10px #18181a2c;
+}
+
+.carousel-caption p {
+    color: var(--text-primary);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1rem;
+}
+
+.carousel-caption img {
+    max-width: 20rem;
+    max-height: 6.25rem;
+    margin-bottom: 3rem;
+}
+
+.btn-buy-now, .btn-play-free-now {
+    font-weight: 600;
+    background-color: var(--theme-primary);
+    width: 10rem;
+}
+
+.btn-wish-list {
+    background-color: var(--theme-primary);
+    width: 3rem;
+}
+
+.btn-wish-list svg {
+    width: 1rem;
+    height: 1rem;
+}
+
+.now-on-sale {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+}
+
+.now-on-sale .section-title {
+    color: var(--theme-primary);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.now-on-sale .now-on-sale-break {
+    align-self:center;
+    margin-bottom: 1.5rem;
+    padding: 0;
+    width: 100%;
+    border: 0.5px solid var(--theme-primary);
+}
+
+.now-on-sale-cards {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.now-on-sale-cards .card{
+    width: 15.5rem;
+    height: 427px;
+    background-color: var(--bg-secondary);
+    transition: all var(--transition-speed) ease;
+}
+
+.now-on-sale-cards .card a{
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.now-on-sale-cards .card img{
+    height: 20rem;
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.now-on-sale-cards .card a .card-body{
+    text-align: center;
+    padding-bottom: 0.5rem;
+}
+
+.now-on-sale-cards .card a .card-body .card-title{
+    font-size: 16px;
+}
+
+.now-on-sale-cards .card a .card-body .card-details{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+}
+
+.now-on-sale-cards .card a .card-body .card-details .card-cost{
+    font-size: 16px;
+    margin-left: auto;
+    padding-right: 0.6rem;
+}
+
+.card:hover{
+    transform: scale(1.02) translateY(-0.5rem);
+}
+
+.community-recommended-cards {
+    margin-top: 5rem;
+}
+
+.fa {
+    color: var(--theme-primary);
+    padding-left: 0.6rem;
+}

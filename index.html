@@ -6,8 +6,10 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="styles/navigation.css">
-        <link rel="stylesheet" href="styles/index.css">
+        <link rel="stylesheet" href="styles/store.css">
         <title>GGS | Store</title>
     </head>
     <body>
@@ -104,14 +106,287 @@
                     </li>
                 </ul>
             </nav>
+            <ul class="nav justify-content-end">
+                <li class="nav-item dropdown">
+                    <a class="nav-link active" aria-current="page" href="#" data-bs-toggle="dropdown">
+                        <div id="language-icon">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="globe" class="svg-inline--fa fa-globe fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6 24.4 33.8 41.2 84.7 50 141.6h108zM177.2 18.4C105.8 39.6 47.8 92.1 19.3 160h108c8.7-56.9 25.5-107.8 49.9-141.6zM487.4 192H372.7c2.1 21 3.3 42.5 3.3 64s-1.2 43-3.3 64h114.6c5.5-20.5 8.6-41.8 8.6-64s-3.1-43.5-8.5-64zM120 256c0-21.5 1.2-43 3.3-64H8.6C3.2 212.5 0 233.8 0 256s3.2 43.5 8.6 64h114.6c-2-21-3.2-42.5-3.2-64zm39.5 96c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152h-177zm159.3 141.6c71.4-21.2 129.4-73.7 158-141.6h-108c-8.8 56.9-25.6 107.8-50 141.6zM19.3 352c28.6 67.9 86.5 120.4 158 141.6-24.4-33.8-41.2-84.7-50-141.6h-108z"></path></svg>
+                        </div>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">العربية</a></li>
+                        <li><a class="dropdown-item" href="#">Deutsch</a></li>
+                        <li><a class="dropdown-item" href="#">Español (Spain)</a></li>
+                        <li><a class="dropdown-item" href="#">Español (LA)</a></li>
+                        <li><a class="dropdown-item" href="#">Français</a></li>
+                        <li><a class="dropdown-item" href="#">Italiano</a></li>
+                        <li><a class="dropdown-item" href="#">日本語</a></li>
+                        <li><a class="dropdown-item" href="#">Русский</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active" aria-current="page" href="#" data-bs-toggle="dropdown">
+                        <div id="user-icon">
+                            <img src="images/user.png" alt="User image">
+                        </div>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Account</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Logout</a></li>
+                    </ul>
+                </li>
+              </ul>
         </header>
         <main>
             <!-- <iframe width="420" height="315"
                 src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1&controls=0">
             </iframe> -->
+            
+            <div class="container">
+                <section class="top-store-links">
+                    <a href="">Highlights</a>
+                    <a href="">Browse</a>
+                </section>
+                <section class="store-carousel">
+                    <div id="carouselControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-bs-slide-to="0" class="active"></li>
+                            <li data-bs-slide-to="1"></li>
+                            <li data-bs-slide-to="2"></li>
+                            <li data-bs-slide-to="3"></li>
+                            <li data-bs-slide-to="4"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" pause="hover">
+                                <img src="images/games/cyber-punk-big.webp" class="d-block w-100" alt="Cyberpunk 2077">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <img src="images/cyberpunk_logo.png" alt="">
+                                    <p>AVAILABLE NOW</p>
+                                    <p>Explore Night City, where the choices you make </p>
+                                    <p>shape the story and the world around you</p>
+                                    <br>
+                                    <p>Starting At CA$79.99</p>
+                                    <button type="button" class="btn btn-buy-now">BUY NOW</button>
+                                    <button type="button" class="btn btn-wish-list">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="heart" class="svg-inline--fa fa-heart fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z"></path></svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="carousel-item" pause="hover">
+                                <img src="images/games/rocket-league-big.jpg" class="d-block w-100" alt="Rocket League">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <img src="images/rocket-league-logo.png" alt="">
+                                    <p>SEASON 2 AVAILABLE NOW</p>
+                                    <p>Check out the new Arena, Competitive Season, Rocket </p>
+                                    <p>Pass, and more!</p>
+                                    <br>
+                                    <p>Free</p>
+                                    <button type="button" class="btn btn-play-free-now">PLAY FREE NOW</button>
+                                    <button type="button" class="btn btn-wish-list">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="heart" class="svg-inline--fa fa-heart fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z"></path></svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="carousel-item" pause="hover">
+                                <img src="images/games/immortals-fenyx-big.webp" class="d-block w-100" alt="Immortals Fenyx">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <img src="images/immortalsfenyxrising-logo.png" alt="">
+                                    <p>AVAILABLE NOW</p>
+                                    <p>Play as Fenyx, a new winged demigod, on a quest to save </p>
+                                    <p>the Greek gods from a dark curse.</p>
+                                    <br>
+                                    <p>Starting At CA$79.99</p>
+                                    <button type="button" class="btn btn-buy-now">BUY NOW</button>
+                                    <button type="button" class="btn btn-wish-list">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="heart" class="svg-inline--fa fa-heart fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z"></path></svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="carousel-item" pause="hover">
+                                <img src="images/games/warframe-big.webp" class="d-block w-100" alt="Warframe">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <img src="images/warframe-logo.png" alt="">
+                                    <p>AVAILABLE NOW</p>
+                                    <p>Join the Tenno and defend an ever-expanding universe</p>
+                                    <p> in the genre-defining looter shooter</p>
+                                    <br>
+                                    <p>Free</p>
+                                    <button type="button" class="btn btn-play-free-now">PLAY FREE NOW</button>
+                                    <button type="button" class="btn btn-wish-list">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="heart" class="svg-inline--fa fa-heart fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z"></path></svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="carousel-item" pause="hover">
+                                <img src="images/games/fortnight-big.jpg" class="d-block w-100" alt="Fortnight">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <img src="images/fortnite-logo.png" alt="">
+                                    <p>NEW SEASON AVAILABLE</p>
+                                    <p>The hunt is on in Fortnite Chapter 2 - </p>
+                                    <p>Season 5: Zero Point</p>
+                                    <br>
+                                    <p>Free</p>
+                                    <button type="button" class="btn btn-play-free-now">PLAY FREE NOW</button>
+                                    <button type="button" class="btn btn-wish-list">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="heart" class="svg-inline--fa fa-heart fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z"></path></svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselControls" role="button" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselControls" role="button" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </a>
+                    </div>
+                    <div class="carousel-side-bar">
+                        <ul class="carousel-side-bar-list">
+                            <li class="carousel-side-bar-item">
+                                <img src="images/games/cyber-punk-small.png" alt="">
+                                <p>Cyberpunk</p>
+                            </li>
+                            <hr class="carousel-side-bar-break">
+                            <li class="carousel-side-bar-item">
+                                <img src="images/games/rocket-league-small.jpg" alt="">
+                                <p>Rocket League</p>
+                            </li>
+                            <hr class="carousel-side-bar-break">
+                            <li class="carousel-side-bar-item">
+                                <img src="images/games/immortals-fenyx-small.png" alt="">
+                                <p><span>Immortals Fenyx</span> <span>Rising</span></p>
+                            </li>
+                            <hr class="carousel-side-bar-break">
+                            <li class="carousel-side-bar-item">
+                                <img src="images/games/warframe-small.webp" alt="">
+                                <p>Warframe</p>
+                            </li>
+                            <hr class="carousel-side-bar-break">
+                            <li class="carousel-side-bar-item carousel-side-bar-last-item">
+                                <img src="images/games/fortnight-small.jpg" alt="">
+                                <p>Fortnight</p>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <section class="now-on-sale">
+                    <div class="section-title">
+                        Now on Sale
+                    </div>
+                    <hr class="now-on-sale-break">
+                    <section class="now-on-sale-cards">
+                        <div class="card border-0">
+                            <a href="">
+                                <img src="images/games/ac-valhalla-med.webp" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        Assassin's Creed: Valhalla
+                                    </h5>
+                                    <div class="card-details">
+                                        <i class="fa fa-linux" aria-hidden="true"></i>
+                                        <i class="fa fa-windows" aria-hidden="true"></i>
+                                        <h5 class="card-cost">
+                                            CA$79.99
+                                        </h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card border-0">
+                            <a href="">
+                                <img src="images/games/civ6-small.webp" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        Assassin's Creed: Valhalla
+                                    </h5>
+                                    <div class="card-details">
+                                        <i class="fa fa-linux" aria-hidden="true"></i>
+                                        <i class="fa fa-windows" aria-hidden="true"></i>
+                                        <h5 class="card-cost">
+                                            CA$79.99
+                                        </h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card border-0">
+                            <a href="">
+                                <img src="images/games/godfall-small.webp" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        Assassin's Creed: Valhalla
+                                    </h5>
+                                    <div class="card-details">
+                                        <i class="fa fa-linux" aria-hidden="true"></i>
+                                        <i class="fa fa-windows" aria-hidden="true"></i>
+                                        <h5 class="card-cost">
+                                            CA$79.99
+                                        </h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card border-0">
+                            <a href="">
+                                <img src="images/games/rdr-online-small.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        Assassin's Creed: Valhalla
+                                    </h5>
+                                    <div class="card-details">
+                                        <i class="fa fa-linux" aria-hidden="true"></i>
+                                        <i class="fa fa-windows" aria-hidden="true"></i>
+                                        <h5 class="card-cost">
+                                            CA$79.99
+                                        </h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card border-0">
+                            <a href="">
+                                <img src="images/games/iron-harvest-small.webp" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        Iron Harvest: 1920
+                                    </h5>
+                                    <div class="card-details">
+                                        <i class="fa fa-linux" aria-hidden="true"></i>
+                                        <i class="fa fa-windows" aria-hidden="true"></i>
+                                        <h5 class="card-cost">
+                                            CA$79.99
+                                        </h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </section>
+                </section>
+
+                <section class="container">
+                    <section class="community-recommended-cards">
+
+                    </section>
+                    Whats good?
+                </section>
+                <section class="container">
+                    Recommended for you
+                </section>
+                <section class="container">
+                    Games Streaming Now
+                </section>
+                <section class="container">
+                    News
+                </section>
+            </div>
         </main>
         <footer>
 
         </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     </body>
 </html>
