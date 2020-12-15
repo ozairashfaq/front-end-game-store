@@ -65,7 +65,6 @@
 }
 
 .top-store-links{
-    width: 100%;
     padding: 0;
     margin: 0;
     margin-bottom: 2rem;
@@ -205,7 +204,7 @@
     margin-top: 4rem;
 }
 
-.now-on-sale .section-title {
+.section-title {
     color: var(--theme-primary);
     font-size: 20px;
     font-weight: 600;
@@ -259,21 +258,195 @@
     margin-top: 2rem;
 }
 
+.now-on-sale-cards .card a .card-body .sale-percent{
+    font-size: 15px;
+    margin-left: auto;
+    width: 2.5rem;
+    height: 1.5rem;
+    background-color: var(--theme-secondary);
+    border-radius: 20%;
+}
+
 .now-on-sale-cards .card a .card-body .card-details .card-cost{
     font-size: 16px;
-    margin-left: auto;
+    margin-left: 0.2rem;
     padding-right: 0.6rem;
+    text-decoration: line-through;
+    text-align: center;
 }
 
 .card:hover{
     transform: scale(1.02) translateY(-0.5rem);
 }
 
-.community-recommended-cards {
-    margin-top: 5rem;
+.community-recommended {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+}
+
+.community-recommended a {
+    text-decoration: none;
+    color: var(--text-primary);
+}
+
+.community-recommended-group {
+    display: flex;
+    flex-direction: row;
+    height: 28rem;
+}
+
+.community-recommended-group .game-ad-large {
+    width: 100%;
+    margin-right: 0.5rem;
+    border-radius: 1rem;
+}
+
+.game-ad {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: var(--bg-secondary);
+    border-radius: 0.5rem;
+    transition: all var(--transition-speed) ease;
+}
+
+.game-ad:hover{
+    transform: scale(1.02) translateY(-0.5rem);
+}
+
+.game-ad .game-ad-img img {
+    width: 100%;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.game-ad-body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.game-ad-body .game-details{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.community-recommended-group .game-ad-small {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-row: auto auto;
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    transform: translateY(-1.1rem);
+}
+
+.community-recommended-group .game-ad-small .game-ad {
+    height: 100%;
+}
+
+.community-recommended-group .game-ad-small .game-ad .game-ad-img img {
+    width: 100%;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.community-recommended .carousel{
+    max-width: 100%;
+}
+
+.community-recommended .carousel .carousel-indicators {
+    transform: translateY(3.5rem);
+}
+
+.community-recommended .carousel .carousel-control-prev {
+    transform: translateX(-8rem);
+    width: 10%;
+    height: 100%;
+}
+
+.community-recommended .carousel .carousel-control-next {
+    transform: translateX(8rem);
+    width: 10%;
+    height: 100%;
 }
 
 .fa {
     color: var(--theme-primary);
     padding-left: 0.6rem;
+}
+
+.games-streaming-now {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+}
+
+.section-news {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+}
+
+.games-streaming-now-videos {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+}
+
+.games-streaming-now-videos iframe {
+    width: 35rem;
+    height: 19.6rem;
+    padding: 1rem;
+}
+
+.games-streaming-view-more {
+    margin-top: 1rem;
+    text-align: center;
+    align-items: center;
+}
+
+.section-news .card {
+    margin-bottom: 2rem;
+    border: none;
+    background-color: var(--bg-secondary);
+    transition: all var(--transition-speed) ease;
+}
+
+.section-news .card:hover{
+    transform: scale(1.02) translateY(-0.5rem);
+}
+
+.section-news img {
+    width: 100%;
+    height: 10rem;
+}
+
+.section-news p {
+    font-size: 12px;
+}
+
+.section-news .article-source {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.store-footer {
+    display: flex;
+    flex-direction: column;
+    height: 12rem;
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    text-align: center;
+    justify-content: center;
+    padding: auto;
 }

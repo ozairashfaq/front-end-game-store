@@ -1,0 +1,20 @@
+/*
+* Author: Ozair Ashfaq
+* Date: 13/12/2020
+* browse.css
+*/
+
+/* CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.top-store-links a:first-child {
+    color: var(--bg-tertiary);
+}
+
+.top-store-links a:last-child {
+    color: var(--theme-primary);
+}

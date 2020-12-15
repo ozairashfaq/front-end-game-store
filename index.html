@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -36,7 +37,7 @@
                         </div>
                     </li>
                     <li class="custom-nav-item" id="nav-home-page">
-                        <a href="#" class="custom-nav-link">
+                        <a href="index.html" class="custom-nav-link">
                             <svg 
                                 aria-hidden="true" 
                                 focusable="false" 
@@ -55,21 +56,21 @@
                         </a>
                     </li>
                     <li class="custom-nav-item">
-                        <a href="#" class="custom-nav-link">
+                        <a href="pages/browse.html" class="custom-nav-link">
                             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="table" class="svg-inline--fa fa-table fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V80c0-26.51-21.49-48-48-48zM224 416H64v-96h160v96zm0-160H64v-96h160v96zm224 160H288v-96h160v96zm0-160H288v-96h160v96z"></path></svg>
                             <span class="link-text">Browse</span>
                             <div class="browse-selected"></div>
                         </a>
                     </li>
                     <li class="custom-nav-item">
-                        <a href="#" class="custom-nav-link">
+                        <a href="pages/library.html" class="custom-nav-link">
                             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="gamepad" class="svg-inline--fa fa-gamepad fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M480.07 96H160a160 160 0 1 0 114.24 272h91.52A160 160 0 1 0 480.07 96zM248 268a12 12 0 0 1-12 12h-52v52a12 12 0 0 1-12 12h-24a12 12 0 0 1-12-12v-52H84a12 12 0 0 1-12-12v-24a12 12 0 0 1 12-12h52v-52a12 12 0 0 1 12-12h24a12 12 0 0 1 12 12v52h52a12 12 0 0 1 12 12zm216 76a40 40 0 1 1 40-40 40 40 0 0 1-40 40zm64-96a40 40 0 1 1 40-40 40 40 0 0 1-40 40z"></path></svg>
                             <span class="link-text">Library</span>
                             <div class="library-selected"></div>
                         </a>
                     </li>
                     <li class="custom-nav-item">
-                        <a href="#" class="custom-nav-link">
+                        <a href="pages/community.html" class="custom-nav-link">
                             <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="connectdevelop" class="svg-inline--fa fa-connectdevelop fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M550.5 241l-50.089-86.786c1.071-2.142 1.875-4.553 1.875-7.232 0-8.036-6.696-14.733-14.732-15.001l-55.447-95.893c.536-1.607 1.071-3.214 1.071-4.821 0-8.571-6.964-15.268-15.268-15.268-4.821 0-8.839 2.143-11.786 5.625H299.518C296.839 18.143 292.821 16 288 16s-8.839 2.143-11.518 5.625H170.411C167.464 18.143 163.447 16 158.625 16c-8.303 0-15.268 6.696-15.268 15.268 0 1.607.536 3.482 1.072 4.821l-55.983 97.233c-5.356 2.41-9.107 7.5-9.107 13.661 0 .535.268 1.071.268 1.607l-53.304 92.143c-7.232 1.339-12.59 7.5-12.59 15 0 7.232 5.089 13.393 12.054 15l55.179 95.358c-.536 1.607-.804 2.946-.804 4.821 0 7.232 5.089 13.393 12.054 14.732l51.697 89.732c-.536 1.607-1.071 3.482-1.071 5.357 0 8.571 6.964 15.268 15.268 15.268 4.821 0 8.839-2.143 11.518-5.357h106.875C279.161 493.857 283.447 496 288 496s8.839-2.143 11.518-5.357h107.143c2.678 2.946 6.696 4.821 10.982 4.821 8.571 0 15.268-6.964 15.268-15.268 0-1.607-.267-2.946-.803-4.285l51.697-90.268c6.964-1.339 12.054-7.5 12.054-14.732 0-1.607-.268-3.214-.804-4.821l54.911-95.358c6.964-1.339 12.322-7.5 12.322-15-.002-7.232-5.092-13.393-11.788-14.732zM153.535 450.732l-43.66-75.803h43.66v75.803zm0-83.839h-43.66c-.268-1.071-.804-2.142-1.339-3.214l44.999-47.41v50.624zm0-62.411l-50.357 53.304c-1.339-.536-2.679-1.34-4.018-1.607L43.447 259.75c.535-1.339.535-2.679.535-4.018s0-2.41-.268-3.482l51.965-90c2.679-.268 5.357-1.072 7.768-2.679l50.089 51.965v92.946zm0-102.322l-45.803-47.41c1.339-2.143 2.143-4.821 2.143-7.767 0-.268-.268-.804-.268-1.072l43.928-15.804v72.053zm0-80.625l-43.66 15.804 43.66-75.536v59.732zm326.519 39.108l.804 1.339L445.5 329.125l-63.75-67.232 98.036-101.518.268.268zM291.75 355.107l11.518 11.786H280.5l11.25-11.786zm-.268-11.25l-83.303-85.446 79.553-84.375 83.036 87.589-79.286 82.232zm5.357 5.893l79.286-82.232 67.5 71.25-5.892 28.125H313.714l-16.875-17.143zM410.411 44.393c1.071.536 2.142 1.072 3.482 1.34l57.857 100.714v.536c0 2.946.803 5.624 2.143 7.767L376.393 256l-83.035-87.589L410.411 44.393zm-9.107-2.143L287.732 162.518l-57.054-60.268 166.339-60h4.287zm-123.483 0c2.678 2.678 6.16 4.285 10.179 4.285s7.5-1.607 10.179-4.285h75L224.786 95.821 173.893 42.25h103.928zm-116.249 5.625l1.071-2.142a33.834 33.834 0 0 0 2.679-.804l51.161 53.84-54.911 19.821V47.875zm0 79.286l60.803-21.964 59.732 63.214-79.553 84.107-40.982-42.053v-83.304zm0 92.678L198 257.607l-36.428 38.304v-76.072zm0 87.858l42.053-44.464 82.768 85.982-17.143 17.678H161.572v-59.196zm6.964 162.053c-1.607-1.607-3.482-2.678-5.893-3.482l-1.071-1.607v-89.732h99.91l-91.607 94.821h-1.339zm129.911 0c-2.679-2.41-6.428-4.285-10.447-4.285s-7.767 1.875-10.447 4.285h-96.429l91.607-94.821h38.304l91.607 94.821H298.447zm120-11.786l-4.286 7.5c-1.339.268-2.41.803-3.482 1.339l-89.196-91.875h114.376l-17.412 83.036zm12.856-22.232l12.858-60.803h21.964l-34.822 60.803zm34.822-68.839h-20.357l4.553-21.16 17.143 18.214c-.535.803-1.071 1.874-1.339 2.946zm66.161-107.411l-55.447 96.697c-1.339.535-2.679 1.071-4.018 1.874l-20.625-21.964 34.554-163.928 45.803 79.286c-.267 1.339-.803 2.678-.803 4.285 0 1.339.268 2.411.536 3.75z"></path></svg>
                             <span class="link-text">Community</span>
                             <div class="community-selected"></div>
@@ -77,31 +78,31 @@
                     </li>
                     <hr class="custom-nav-line-break">
                     <li class="custom-nav-item">
-                        <a href="#" class="custom-nav-link">
+                        <a href="pages/points-shop.html" class="custom-nav-link">
                             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="coins" class="svg-inline--fa fa-coins fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M0 405.3V448c0 35.3 86 64 192 64s192-28.7 192-64v-42.7C342.7 434.4 267.2 448 192 448S41.3 434.4 0 405.3zM320 128c106 0 192-28.7 192-64S426 0 320 0 128 28.7 128 64s86 64 192 64zM0 300.4V352c0 35.3 86 64 192 64s192-28.7 192-64v-51.6c-41.3 34-116.9 51.6-192 51.6S41.3 334.4 0 300.4zm416 11c57.3-11.1 96-31.7 96-55.4v-42.7c-23.2 16.4-57.3 27.6-96 34.5v63.6zM192 160C86 160 0 195.8 0 240s86 80 192 80 192-35.8 192-80-86-80-192-80zm219.3 56.3c60-10.8 100.7-32 100.7-56.3v-42.7c-35.5 25.1-96.5 38.6-160.7 41.8 29.5 14.3 51.2 33.5 60 57.2z"></path></svg>
                             <span class="link-text">Points Shop</span>
                             <div class="points-selected"></div>
                         </a>
                     </li>
                     <li class="custom-nav-item">
-                        <a href="#" class="custom-nav-link">
+                        <a href="#games-streaming-now" class="custom-nav-link">
                             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="crown" class="svg-inline--fa fa-crown fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M528 448H112c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h416c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zm64-320c-26.5 0-48 21.5-48 48 0 7.1 1.6 13.7 4.4 19.8L476 239.2c-15.4 9.2-35.3 4-44.2-11.6L350.3 85C361 76.2 368 63 368 48c0-26.5-21.5-48-48-48s-48 21.5-48 48c0 15 7 28.2 17.7 37l-81.5 142.6c-8.9 15.6-28.9 20.8-44.2 11.6l-72.3-43.4c2.7-6 4.4-12.7 4.4-19.8 0-26.5-21.5-48-48-48S0 149.5 0 176s21.5 48 48 48c2.6 0 5.2-.4 7.7-.8L128 416h384l72.3-192.8c2.5.4 5.1.8 7.7.8 26.5 0 48-21.5 48-48s-21.5-48-48-48z"></path></svg>
                             <span class="link-text">Streaming</span>
                             <div class="streaming-selected"></div>
                         </a>
                     </li>
                     <li class="custom-nav-item">
-                        <a href="#" class="custom-nav-link">
+                        <a href="#store-news" class="custom-nav-link">
                             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="newspaper" class="svg-inline--fa fa-newspaper fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M552 64H88c-13.255 0-24 10.745-24 24v8H24c-13.255 0-24 10.745-24 24v272c0 30.928 25.072 56 56 56h472c26.51 0 48-21.49 48-48V88c0-13.255-10.745-24-24-24zM56 400a8 8 0 0 1-8-8V144h16v248a8 8 0 0 1-8 8zm236-16H140c-6.627 0-12-5.373-12-12v-8c0-6.627 5.373-12 12-12h152c6.627 0 12 5.373 12 12v8c0 6.627-5.373 12-12 12zm208 0H348c-6.627 0-12-5.373-12-12v-8c0-6.627 5.373-12 12-12h152c6.627 0 12 5.373 12 12v8c0 6.627-5.373 12-12 12zm-208-96H140c-6.627 0-12-5.373-12-12v-8c0-6.627 5.373-12 12-12h152c6.627 0 12 5.373 12 12v8c0 6.627-5.373 12-12 12zm208 0H348c-6.627 0-12-5.373-12-12v-8c0-6.627 5.373-12 12-12h152c6.627 0 12 5.373 12 12v8c0 6.627-5.373 12-12 12zm0-96H140c-6.627 0-12-5.373-12-12v-40c0-6.627 5.373-12 12-12h360c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12z"></path></svg>
                             <span class="link-text">News</span>
                             <div class="news-selected"></div>
                         </a>
                     </li>
                     <li class="custom-nav-item">
-                        <a href="#" class="custom-nav-link">
+                        <a href="pages/support.html" class="custom-nav-link">
                             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="cog" class="svg-inline--fa fa-cog fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"></path></svg>
-                            <span class="link-text">Settings</span>
-                            <div class="settings-selected"></div>
+                            <span class="link-text">Support</span>
+                            <div class="support-selected"></div>
                         </a>
                     </li>
                 </ul>
@@ -139,15 +140,13 @@
               </ul>
         </header>
         <main>
-            <!-- <iframe width="420" height="315"
-                src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1&controls=0">
-            </iframe> -->
-            
             <div class="container">
                 <section class="top-store-links">
-                    <a href="">Highlights</a>
-                    <a href="">Browse</a>
+                    <a href="index.html">Highlights</a>
+                    <a href="pages/browse.html">Browse</a>
                 </section>
+            </div>
+            <div class="container">
                 <section class="store-carousel">
                     <div id="carouselControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
                         <ol class="carousel-indicators">
@@ -273,11 +272,12 @@
                     </div>
                 </section>
                 
+                <!-- Now on Sale -->
                 <section class="now-on-sale">
                     <div class="section-title">
                         Now on Sale
+                        <hr class="now-on-sale-break">
                     </div>
-                    <hr class="now-on-sale-break">
                     <section class="now-on-sale-cards">
                         <div class="card border-0">
                             <a href="">
@@ -289,6 +289,7 @@
                                     <div class="card-details">
                                         <i class="fa fa-linux" aria-hidden="true"></i>
                                         <i class="fa fa-windows" aria-hidden="true"></i>
+                                        <span class="sale-percent">-10%</span>
                                         <h5 class="card-cost">
                                             CA$79.99
                                         </h5>
@@ -301,11 +302,12 @@
                                 <img src="images/games/civ6-small.webp" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">
-                                        Assassin's Creed: Valhalla
+                                        Sid Meier's Civilization VI
                                     </h5>
                                     <div class="card-details">
                                         <i class="fa fa-linux" aria-hidden="true"></i>
                                         <i class="fa fa-windows" aria-hidden="true"></i>
+                                        <span class="sale-percent">-20%</span>
                                         <h5 class="card-cost">
                                             CA$79.99
                                         </h5>
@@ -318,11 +320,12 @@
                                 <img src="images/games/godfall-small.webp" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">
-                                        Assassin's Creed: Valhalla
+                                        Godfall
                                     </h5>
                                     <div class="card-details">
                                         <i class="fa fa-linux" aria-hidden="true"></i>
                                         <i class="fa fa-windows" aria-hidden="true"></i>
+                                        <span class="sale-percent">-20%</span>
                                         <h5 class="card-cost">
                                             CA$79.99
                                         </h5>
@@ -335,13 +338,14 @@
                                 <img src="images/games/rdr-online-small.jpg" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">
-                                        Assassin's Creed: Valhalla
+                                        Red Dead Online
                                     </h5>
                                     <div class="card-details">
                                         <i class="fa fa-linux" aria-hidden="true"></i>
                                         <i class="fa fa-windows" aria-hidden="true"></i>
+                                        <span class="sale-percent">-75%</span>
                                         <h5 class="card-cost">
-                                            CA$79.99
+                                            CA$29.99
                                         </h5>
                                     </div>
                                 </div>
@@ -357,6 +361,7 @@
                                     <div class="card-details">
                                         <i class="fa fa-linux" aria-hidden="true"></i>
                                         <i class="fa fa-windows" aria-hidden="true"></i>
+                                        <span class="sale-percent">-20%</span>
                                         <h5 class="card-cost">
                                             CA$79.99
                                         </h5>
@@ -367,26 +372,841 @@
                     </section>
                 </section>
 
-                <section class="container">
-                    <section class="community-recommended-cards">
+                <!-- community-recommended -->
+                <section class="community-recommended">
+                    <div class="section-title">
+                        Community Recommended
+                        <hr class="now-on-sale-break">
+                    </div>
+                    <div id="carouselIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-bs-target="#carouselIndicators" data-bs-slide-to="0" class="active"></li>
+                            <li data-bs-target="#carouselIndicators" data-bs-slide-to="1"></li>
+                            <li data-bs-target="#carouselIndicators" data-bs-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-item">
+                            <section class="community-recommended-group">
+                                <div class="game-ad-large">
+                                    <a href="#">
+                                        <div class="game-ad">
+                                            <div class="game-ad-img">
+                                                <img src="images/games/witcher3-goty-med.png" alt="evans-remains-med.webp">
+                                            </div>
+                                            <div class="game-ad-body">
+                                                <span class="game-title">
+                                                    The Witcher 3: Wild Hunt - Game of the Year Edition
+                                                </span>
+                                                <div class="game-details">
+                                                    <div>
+                                                        <i class="fa fa-windows" aria-hidden="true"></i>
+                                                    </div>
+                                                    <span class="game-cost">
+                                                        CA$69.89
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="game-ad-small">
+                                    <a href="#">
+                                        <div class="game-ad">
+                                            <div class="game-ad-img">
+                                                <img src="images/games/carrion-med.png" alt="evans-remains-med.webp">
+                                            </div>
+                                            <div class="game-ad-body">
+                                                <span class="game-title">
+                                                    CARRION
+                                                </span>
+                                                <div class="game-details">
+                                                    <div>
+                                                        <i class="fa fa-windows" aria-hidden="true"></i>
+                                                        <i class="fa fa-apple"></i>
+                                                        <i class="fa fa-linux" aria-hidden="true"></i>
+                                                    </div>
+                                                    <span class="game-cost">
+                                                        CA$22.79
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="game-ad">
+                                            <div class="game-ad-img">
+                                                <img src="images/games/roki-med.png" alt="evans-remains-med.webp">
+                                            </div>
+                                            <div class="game-ad-body">
+                                                <span class="game-title">
+                                                    Röki
+                                                </span>
+                                                <div class="game-details">
+                                                    <div>
+                                                        <i class="fa fa-windows" aria-hidden="true"></i>
+                                                        <i class="fa fa-apple"></i>
+                                                    </div>
+                                                    <span class="game-cost">
+                                                        CA$28.99
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="game-ad">
+                                            <div class="game-ad-img">
+                                                <img src="images/games/messenger-med.png" alt="evans-remains-med.webp">
+                                            </div>
+                                            <div class="game-ad-body">
+                                                <span class="game-title">
+                                                    The Messenger
+                                                </span>
+                                                <div class="game-details">
+                                                    <div>
+                                                        <i class="fa fa-windows" aria-hidden="true"></i>
+                                                    </div>
+                                                    <span class="game-cost">
+                                                        CA$22.79
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="game-ad">
+                                            <div class="game-ad-img">
+                                                <img src="images/games/no-man-sky-med.png" alt="evans-remains-med.webp">
+                                            </div>
+                                            <div class="game-ad-body">
+                                                <span class="game-title">
+                                                    No Man's Sky
+                                                </span>
+                                                <div class="game-details">
+                                                    <div>
+                                                        <i class="fa fa-windows" aria-hidden="true"></i>
+                                                    </div>
+                                                    <span class="game-cost">
+                                                        CA$66.49
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="carousel-item active">
+                            <section class="community-recommended-group">
+                                <div class="game-ad-large">
+                                    <a href="#">
+                                        <div class="game-ad">
+                                            <div class="game-ad-img">
+                                                <img src="images/games/divinity-original-sin-2-med.png" alt="evans-remains-med.webp">
+                                            </div>
+                                            <div class="game-ad-body">
+                                                <span class="game-title">
+                                                    Divinity: Original Sin 2 - Definitive Edition
+                                                </span>
+                                                <div class="game-details">
+                                                    <div>
+                                                        <i class="fa fa-windows" aria-hidden="true"></i>
+                                                        <i class="fa fa-apple"></i>
+                                                    </div>
+                                                    <span class="game-cost">
+                                                        CA$54.99
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="game-ad-small">
+                                    <a href="#">
+                                        <div class="game-ad">
+                                            <div class="game-ad-img">
+                                                <img src="images/games/desperados-iii-med.png" alt="evans-remains-med.webp">
+                                            </div>
+                                            <div class="game-ad-body">
+                                                <span class="game-title">
+                                                    Desperados III
+                                                </span>
+                                                <div class="game-details">
+                                                    <div>
+                                                        <i class="fa fa-windows" aria-hidden="true"></i>
+                                                    </div>
+                                                    <span class="game-cost">
+                                                        CA$49.99
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="game-ad">
+                                            <div class="game-ad-img">
+                                                <img src="images/games/stardew-valley-med.png" alt="evans-remains-med.webp">
+                                            </div>
+                                            <div class="game-ad-body">
+                                                <span class="game-title">
+                                                    Stardew Valley
+                                                </span>
+                                                <div class="game-details">
+                                                    <div>
+                                                        <i class="fa fa-windows" aria-hidden="true"></i>
+                                                        <i class="fa fa-apple"></i>
+                                                        <i class="fa fa-linux" aria-hidden="true"></i>
+                                                    </div>
+                                                    <span class="game-cost">
+                                                        CA$16.99
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="game-ad">
+                                            <div class="game-ad-img">
+                                                <img src="images/games/rim-world-med.png" alt="evans-remains-med.webp">
+                                            </div>
+                                            <div class="game-ad-body">
+                                                <span class="game-title">
+                                                    RimWorld
+                                                </span>
+                                                <div class="game-details">
+                                                    <div>
+                                                        <i class="fa fa-windows" aria-hidden="true"></i>
+                                                        <i class="fa fa-apple"></i>
+                                                        <i class="fa fa-linux" aria-hidden="true"></i>
+                                                    </div>
+                                                    <span class="game-cost">
+                                                        CA$39.99
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="game-ad">
+                                            <div class="game-ad-img">
+                                                <img src="images/games/outer-worlds-med.png" alt="evans-remains-med.webp">
+                                            </div>
+                                            <div class="game-ad-body">
+                                                <span class="game-title">
+                                                    The Outer Worlds
+                                                </span>
+                                                <div class="game-details">
+                                                    <div>
+                                                        <i class="fa fa-windows" aria-hidden="true"></i>
+                                                    </div>
+                                                    <span class="game-cost">
+                                                        CA$79.99
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="carousel-item">
+                            <section class="community-recommended-group">
+                                <div class="game-ad-large">
+                                    <a href="#">
+                                        <div class="game-ad">
+                                            <div class="game-ad-img">
+                                                <img src="images/games/ghost-runner-med.png" alt="evans-remains-med.webp">
+                                            </div>
+                                            <div class="game-ad-body">
+                                                <span class="game-title">
+                                                    Ghostrunner
+                                                </span>
+                                                <div class="game-details">
+                                                    <div>
+                                                        <i class="fa fa-windows" aria-hidden="true"></i>
+                                                    </div>
+                                                    <span class="game-cost">
+                                                        CA$39.99
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="game-ad-small">
+                                    <a href="#">
+                                        <div class="game-ad">
+                                            <div class="game-ad-img">
+                                                <img src="images/games/carrion-med.png" alt="evans-remains-med.webp">
+                                            </div>
+                                            <div class="game-ad-body">
+                                                <span class="game-title">
+                                                    CARRION
+                                                </span>
+                                                <div class="game-details">
+                                                    <div>
+                                                        <i class="fa fa-windows" aria-hidden="true"></i>
+                                                        <i class="fa fa-apple"></i>
+                                                        <i class="fa fa-linux" aria-hidden="true"></i>
+                                                    </div>
+                                                    <span class="game-cost">
+                                                        CA$22.79
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="game-ad">
+                                            <div class="game-ad-img">
+                                                <img src="images/games/roki-med.png" alt="evans-remains-med.webp">
+                                            </div>
+                                            <div class="game-ad-body">
+                                                <span class="game-title">
+                                                    Röki
+                                                </span>
+                                                <div class="game-details">
+                                                    <div>
+                                                        <i class="fa fa-windows" aria-hidden="true"></i>
+                                                        <i class="fa fa-apple"></i>
+                                                    </div>
+                                                    <span class="game-cost">
+                                                        CA$28.99
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="game-ad">
+                                            <div class="game-ad-img">
+                                                <img src="images/games/messenger-med.png" alt="evans-remains-med.webp">
+                                            </div>
+                                            <div class="game-ad-body">
+                                                <span class="game-title">
+                                                    The Messenger
+                                                </span>
+                                                <div class="game-details">
+                                                    <div>
+                                                        <i class="fa fa-windows" aria-hidden="true"></i>
+                                                    </div>
+                                                    <span class="game-cost">
+                                                        CA$22.79
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="game-ad">
+                                            <div class="game-ad-img">
+                                                <img src="images/games/no-man-sky-med.png" alt="evans-remains-med.webp">
+                                            </div>
+                                            <div class="game-ad-body">
+                                                <span class="game-title">
+                                                    No Man's Sky
+                                                </span>
+                                                <div class="game-details">
+                                                    <div>
+                                                        <i class="fa fa-windows" aria-hidden="true"></i>
+                                                    </div>
+                                                    <span class="game-cost">
+                                                        CA$66.49
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </section>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselIndicators" role="button" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </a>
+                    </div>
+                </section>
 
+                <!-- Recommended for you -->
+                <section class="community-recommended">
+                    <div class="section-title">
+                        Recommended for you
+                        <hr class="now-on-sale-break">
+                    </div>
+                    <div id="carouselIndicators2" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-bs-target="#carouselIndicators2" data-bs-slide-to="0" class="active"></li>
+                            <li data-bs-target="#carouselIndicators2" data-bs-slide-to="1"></li>
+                            <li data-bs-target="#carouselIndicators2" data-bs-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-item active">
+                            <section class="community-recommended-group">
+                                <div class="game-ad-large">
+                                    <a href="#">
+                                        <div class="game-ad">
+                                            <div class="game-ad-img">
+                                                <img src="images/games/warcraft-2-med.png" alt="evans-remains-med.webp">
+                                            </div>
+                                            <div class="game-ad-body">
+                                                <span class="game-title">
+                                                    Warcraft I & II Bundle
+                                                </span>
+                                                <div class="game-details">
+                                                    <div>
+                                                        <i class="fa fa-windows" aria-hidden="true"></i>
+                                                    </div>
+                                                    <span class="game-cost">
+                                                        CA$19.39
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="game-ad-small">
+                                    <a href="#">
+                                        <div class="game-ad">
+                                            <div class="game-ad-img">
+                                                <img src="images/games/desperados-iii-med.png" alt="evans-remains-med.webp">
+                                            </div>
+                                            <div class="game-ad-body">
+                                                <span class="game-title">
+                                                    Desperados III
+                                                </span>
+                                                <div class="game-details">
+                                                    <div>
+                                                        <i class="fa fa-windows" aria-hidden="true"></i>
+                                                    </div>
+                                                    <span class="game-cost">
+                                                        CA$49.99
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="game-ad">
+                                            <div class="game-ad-img">
+                                                <img src="images/games/control-med.png" alt="evans-remains-med.webp">
+                                            </div>
+                                            <div class="game-ad-body">
+                                                <span class="game-title">
+                                                    Control Ultimate Edition
+                                                </span>
+                                                <div class="game-details">
+                                                    <div>
+                                                        <i class="fa fa-windows" aria-hidden="true"></i>
+                                                    </div>
+                                                    <span class="game-cost">
+                                                        CA$54.99
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="game-ad">
+                                            <div class="game-ad-img">
+                                                <img src="images/games/outer-worlds-med.png" alt="evans-remains-med.webp">
+                                            </div>
+                                            <div class="game-ad-body">
+                                                <span class="game-title">
+                                                    The Outer Worlds
+                                                </span>
+                                                <div class="game-details">
+                                                    <div>
+                                                        <i class="fa fa-windows" aria-hidden="true"></i>
+                                                    </div>
+                                                    <span class="game-cost">
+                                                        CA$79.99
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="game-ad">
+                                            <div class="game-ad-img">
+                                                <img src="images/games/no-man-sky-med.png" alt="evans-remains-med.webp">
+                                            </div>
+                                            <div class="game-ad-body">
+                                                <span class="game-title">
+                                                    No Man's Sky
+                                                </span>
+                                                <div class="game-details">
+                                                    <div>
+                                                        <i class="fa fa-windows" aria-hidden="true"></i>
+                                                    </div>
+                                                    <span class="game-cost">
+                                                        CA$66.49
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="carousel-item">
+                            <section class="community-recommended-group">
+                                <div class="game-ad-large">
+                                    <a href="#">
+                                        <div class="game-ad">
+                                            <div class="game-ad-img">
+                                                <img src="images/games/witcher3-goty-med.png" alt="evans-remains-med.webp">
+                                            </div>
+                                            <div class="game-ad-body">
+                                                <span class="game-title">
+                                                    The Witcher 3: Wild Hunt - Game of the Year Edition
+                                                </span>
+                                                <div class="game-details">
+                                                    <div>
+                                                        <i class="fa fa-windows" aria-hidden="true"></i>
+                                                    </div>
+                                                    <span class="game-cost">
+                                                        CA$69.89
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="game-ad-small">
+                                    <a href="#">
+                                        <div class="game-ad">
+                                            <div class="game-ad-img">
+                                                <img src="images/games/carrion-med.png" alt="evans-remains-med.webp">
+                                            </div>
+                                            <div class="game-ad-body">
+                                                <span class="game-title">
+                                                    CARRION
+                                                </span>
+                                                <div class="game-details">
+                                                    <div>
+                                                        <i class="fa fa-windows" aria-hidden="true"></i>
+                                                        <i class="fa fa-apple"></i>
+                                                        <i class="fa fa-linux" aria-hidden="true"></i>
+                                                    </div>
+                                                    <span class="game-cost">
+                                                        CA$22.79
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="game-ad">
+                                            <div class="game-ad-img">
+                                                <img src="images/games/stardew-valley-med.png" alt="evans-remains-med.webp">
+                                            </div>
+                                            <div class="game-ad-body">
+                                                <span class="game-title">
+                                                    Stardew Valley
+                                                </span>
+                                                <div class="game-details">
+                                                    <div>
+                                                        <i class="fa fa-windows" aria-hidden="true"></i>
+                                                        <i class="fa fa-apple"></i>
+                                                        <i class="fa fa-linux" aria-hidden="true"></i>
+                                                    </div>
+                                                    <span class="game-cost">
+                                                        CA$16.99
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="game-ad">
+                                            <div class="game-ad-img">
+                                                <img src="images/games/rim-world-med.png" alt="evans-remains-med.webp">
+                                            </div>
+                                            <div class="game-ad-body">
+                                                <span class="game-title">
+                                                    RimWorld
+                                                </span>
+                                                <div class="game-details">
+                                                    <div>
+                                                        <i class="fa fa-windows" aria-hidden="true"></i>
+                                                        <i class="fa fa-apple"></i>
+                                                        <i class="fa fa-linux" aria-hidden="true"></i>
+                                                    </div>
+                                                    <span class="game-cost">
+                                                        CA$39.99
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="game-ad">
+                                            <div class="game-ad-img">
+                                                <img src="images/games/messenger-med.png" alt="evans-remains-med.webp">
+                                            </div>
+                                            <div class="game-ad-body">
+                                                <span class="game-title">
+                                                    The Messenger
+                                                </span>
+                                                <div class="game-details">
+                                                    <div>
+                                                        <i class="fa fa-windows" aria-hidden="true"></i>
+                                                    </div>
+                                                    <span class="game-cost">
+                                                        CA$22.79
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="carousel-item">
+                            <section class="community-recommended-group">
+                                <div class="game-ad-large">
+                                    <a href="#">
+                                        <div class="game-ad">
+                                            <div class="game-ad-img">
+                                                <img src="images/games/ghost-runner-med.png" alt="evans-remains-med.webp">
+                                            </div>
+                                            <div class="game-ad-body">
+                                                <span class="game-title">
+                                                    Ghostrunner
+                                                </span>
+                                                <div class="game-details">
+                                                    <div>
+                                                        <i class="fa fa-windows" aria-hidden="true"></i>
+                                                    </div>
+                                                    <span class="game-cost">
+                                                        CA$39.99
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="game-ad-small">
+                                    <a href="#">
+                                        <div class="game-ad">
+                                            <div class="game-ad-img">
+                                                <img src="images/games/carrion-med.png" alt="evans-remains-med.webp">
+                                            </div>
+                                            <div class="game-ad-body">
+                                                <span class="game-title">
+                                                    CARRION
+                                                </span>
+                                                <div class="game-details">
+                                                    <div>
+                                                        <i class="fa fa-windows" aria-hidden="true"></i>
+                                                        <i class="fa fa-apple"></i>
+                                                        <i class="fa fa-linux" aria-hidden="true"></i>
+                                                    </div>
+                                                    <span class="game-cost">
+                                                        CA$22.79
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="game-ad">
+                                            <div class="game-ad-img">
+                                                <img src="images/games/roki-med.png" alt="evans-remains-med.webp">
+                                            </div>
+                                            <div class="game-ad-body">
+                                                <span class="game-title">
+                                                    Röki
+                                                </span>
+                                                <div class="game-details">
+                                                    <div>
+                                                        <i class="fa fa-windows" aria-hidden="true"></i>
+                                                        <i class="fa fa-apple"></i>
+                                                    </div>
+                                                    <span class="game-cost">
+                                                        CA$28.99
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="game-ad">
+                                            <div class="game-ad-img">
+                                                <img src="images/games/messenger-med.png" alt="evans-remains-med.webp">
+                                            </div>
+                                            <div class="game-ad-body">
+                                                <span class="game-title">
+                                                    The Messenger
+                                                </span>
+                                                <div class="game-details">
+                                                    <div>
+                                                        <i class="fa fa-windows" aria-hidden="true"></i>
+                                                    </div>
+                                                    <span class="game-cost">
+                                                        CA$22.79
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="game-ad">
+                                            <div class="game-ad-img">
+                                                <img src="images/games/no-man-sky-med.png" alt="evans-remains-med.webp">
+                                            </div>
+                                            <div class="game-ad-body">
+                                                <span class="game-title">
+                                                    No Man's Sky
+                                                </span>
+                                                <div class="game-details">
+                                                    <div>
+                                                        <i class="fa fa-windows" aria-hidden="true"></i>
+                                                    </div>
+                                                    <span class="game-cost">
+                                                        CA$66.49
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </section>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselIndicators2" role="button" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselIndicators2" role="button" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Games Streaming Now -->
+                <section id="games-streaming-now" class="games-streaming-now">
+                    <div class="section-title">
+                        Games Streaming Now
+                        <hr class="now-on-sale-break">
+                    </div>
+                    <section id="video-set-1" class="games-streaming-now-videos">
+                        <iframe src="https://www.youtube.com/embed/FqxNUYhDuS4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/zGK8Q8IlPa4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/Hi6We6zbUDk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/OXL5hj9mfjA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </section>
-                    Whats good?
+                    <section id="video-set-2" class="games-streaming-now-videos visually-hidden">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Q4xpnptlS2s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/WzIygALa6a0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/zGK8Q8IlPa4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Zo9u8GzjjB0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </section>
+                    <section class="games-streaming-view-more">
+                        <button id="btn-load-more-videos" type="button" class="btn btn-outline-success">View More</button>
+                    </section>
                 </section>
-                <section class="container">
-                    Recommended for you
-                </section>
-                <section class="container">
-                    Games Streaming Now
-                </section>
-                <section class="container">
-                    News
+
+                <!-- News -->
+                <section id="store-news" class="section-news">
+                    <div class="section-title">
+                        News
+                        <hr class="now-on-sale-break">
+                    </div>
+                    <section class="news-rows">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm">
+                                    <div class="card">
+                                        <img src="images/news/cyberpunk-advances-tips.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h6 class="card-title">Cyberpunk 2077 Game Guide - Advanced Tips and Tricks</h6>
+                                            <div class="article-source">
+                                                <a href="https://www.gog.com/news/cyberpunk_2077_game_guide_advanced_tips_and_tricks" class="btn btn-success" target="_blank">Go to source</a>
+                                                <p class="card-text">6 hours ago</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm">
+                                    <div class="card">
+                                        <img src="images/news/digerati-coming-soon.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h6 class="card-title">4 exciting titles from Digerati are coming soon!</h6>
+                                            <div class="article-source">
+                                                <a href="https://www.gog.com/news/4_exciting_titles_from_digerati_are_coming_soon_to_gogcom" class="btn btn-success" target="_blank">Go to source</a>
+                                                <p class="card-text">1 days ago</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm">
+                                    <div class="card">
+                                        <img src="images/news/ea-buying-codemaster.webp" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h6 class="card-title">EA is buying UK gaming company Codemasters for $1.2 billion</h6>
+                                            <div class="article-source">
+                                                <a href="https://www.cnet.com/news/ea-is-buying-uk-gaming-company-codemasters-for-1-2-billion/" class="btn btn-success" target="_blank">Go to source</a>
+                                                <p class="card-text">1 days ago</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm">
+                                    <div class="card">
+                                        <img src="images/news/outwards-three-brothers.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h6 class="card-title">Release: Outward: The Three Brothers DLC</h6>
+                                            <div class="article-source">
+                                                <a href="https://www.gog.com/news/release_outward_the_three_brothers_dlc" class="btn btn-success" target="_blank">Go to source</a>
+                                                <p class="card-text">2 hours ago</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm">
+                                    <div class="card">
+                                        <img src="images/news/solasta-crown.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h6 class="card-title">Release: Mighty Switch Force! Collection</h6>
+                                            <div class="article-source">
+                                                <a href="https://www.gog.com/news/release_mighty_switch_force_collection" class="btn btn-success" target="_blank">Go to source</a>
+                                                <p class="card-text">4 days ago</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm">
+                                    <div class="card">
+                                        <img src="images/news/vindiesel-ark2.webp" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h6 class="card-title">Vin Diesel isn't just starring in Ark 2, he's also working on the game</h6>
+                                            <div class="article-source">
+                                                <a href="https://www.pcgamer.com/vin-diesel-isnt-just-starring-in-ark-2-hes-also-working-on-the-game/" class="btn btn-success" target="_blank">Go to source</a>
+                                                <p class="card-text">1 days ago</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                    </section>
                 </section>
             </div>
         </main>
         <footer>
-
+            <section class="store-footer">
+                <div>
+                    <span>© 2020 Pivot Corporation. All rights reserved. All trademarks are property of their respective owners in the US and other countries</span>
+                </div>
+            </section>
         </footer>
+
+        <script src="scripts/store.js" type="text/javascript">alert("This alert box was called with the onload event");</script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-    </body>
+    </body> 
 </html>
