@@ -155,6 +155,104 @@ main {
     transform: rotate(-180deg);
 }
 
+#home-selected, #browse-selected, #library-selected, #community-selected {
+    height: 100%;
+    width: 0.2rem;
+    min-width: 0.2rem;
+    margin-left: -0.2rem;
+    background: var(--theme-primary);
+}
+
+#home-selected, #browse-selected, #library-selected, #community-selected {
+    visibility: hidden;
+}
+
+.custom-navbar:hover #home-selected {
+    margin-left: auto;
+}
+
+.custom-navbar:hover #browse-selected {
+    margin-left: auto;
+}
+
+.custom-navbar:hover #library-selected {
+    margin-left: auto;
+}
+
+.custom-navbar:hover #community-selected {
+    margin-left: auto;
+}
+
+#user-icon {
+    border-radius: 50%;
+    border-color: var(--text-primary);
+    border-style: solid;
+    border-width: 0.15rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    text-align: center;
+    background-color: var(--bg-secondary);
+}
+
+#user-icon img{
+    height: 100%;
+    width: 100%;
+    color:var(--theme-primary);
+}
+
+#language-icon {
+    border-radius: 50%;
+    height: 2.5rem;
+    width: 2.5rem;
+    text-align: center;
+    background-color: var(--bg-secondary);
+}
+
+#language-icon svg{
+    height: 100%;
+    width: 100%;
+    color:var(--theme-primary);
+}
+
+.dropdown-menu, .dropdown-item {
+    font-size: 14px;
+    color:var(--theme-primary);
+    background-color: var(--bg-secondary);
+}
+
+.top-store-links{
+    padding: 0;
+    margin: 0;
+    margin-bottom: 2rem;
+}
+
+.top-store-links a {
+    color: var(--bg-tertiary);
+    text-decoration: none;
+}
+
+.top-store-links a:last-child {
+    color: var(--bg-tertiary);
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+.fa {
+    color: var(--theme-primary);
+    padding-right: 0.6rem;
+}
+
+.store-footer {
+    display: flex;
+    flex-direction: column;
+    height: 12rem;
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    text-align: center;
+    justify-content: center;
+    padding: auto;
+}
+
 /* Small screens */
 @media only screen and (max-width: 700px) {
     .custom-navbar {
