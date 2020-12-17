@@ -80,7 +80,7 @@ function populate_top_games(data, num_output, urlParams) {
             price = "CA$ " + data[i].price;
         }
         // page_loc = "./browse.html?filter_option=hello-world"
-        // console.log(page_loc);
+        console.log(page_loc);
         new_html = "<a href=\"" + page_loc + "\"><div class=\"browse-game-card\"><div class=\"browse-game-img\"><img src=\"" + data[i].img_src + "\" alt=\"" + data[i].name + "\"></div><div class=\"browse-game-details\"><span class=\"browse-game-title\">" + data[i].name + "</span>" + good_os + "<span class=\"browse-game-tags\">" + data[i].tags + "</span></div><div class=\"browse-game-cost\"><span>" + price + "</span></div></div></a>";
         temp_arr.push(new_html);
         new_html = "";

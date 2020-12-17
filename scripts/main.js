@@ -8,6 +8,24 @@ create_game_page(game_data[game_name]);
 $(document).ready(function() 
 {
     var nav_style = getComputedStyle(document.body);
+    let owned_games = JSON.parse(localStorage.getItem("owned_games"));
+    if (owned_games.includes(game_data[game_name].name)) {
+        document.getElementById("btn-add-to-lib").disabled = true;
+        document.getElementById("btn-add-to-lib").innerText = "Already in Library";
+    }
+
+    document.getElementById("btn_checkout_complete").onclick = function(e) {
+        e.preventDefault();
+        document.getElementById("modal-size-id").classList.remove("modal-xl");
+        document.getElementById("modal-size-id").classList.add("modal");
+        document.getElementById("buy-game-modal-inputs").classList.add("visually-hidden");
+        document.getElementById("buy-game-modal-done").classList.remove("visually-hidden");
+        document.getElementById("btn-add-to-lib").disabled = true;
+        document.getElementById("btn-add-to-lib").innerText = "Already in Library";
+        owned_games.push(game_data[game_name].name);
+        // Store
+        localStorage.setItem("owned_games", JSON.stringify(owned_games));
+    };
 });
 
 function create_game_page(data) {
@@ -18,7 +36,7 @@ function create_game_page(data) {
     document.getElementById("id-game-title").innerText = data.name;
     document.getElementById("game-logo").setAttribute("src", data.img_src);
     document.getElementById("game-description").innerText = data.desciption;
-    document.getElementById("game-price").innerText = data.price;
+    document.getElementById("game-price").innerText = "CA $" + data.price;
 
     document.getElementById("id-trailer-video").innerHTML = '<source src="' + data.trailer_src + '">';
 
@@ -55,7 +73,32 @@ function create_game_page(data) {
     document.getElementById("id-game-rating-span").innerText = data.rating;
     document.getElementById("id-game-platform-span").innerHTML = good_os;
 
-    data.about = data.about.replaceAll("\n", "\n\n")
+    newHTML = "";
+    document.getElementById("id-review-rating").innerHTML = data.all_reviews;
+    document.getElementById("id-review-value").innerHTML = data.review_percent + "%";
 
+    newHTML = "";
+    if(data.steam != null && data.steam !== "") {
+        newHTML = '<a href="' + data.steam + '" target="_blank"><img src="../../images/steam-game-store.webp" alt="Steam Store"></a>';
+    } else {
+        document.getElementById("id-steam-link").classList.add("visually-hidden");
+    }
+    document.getElementById("id-steam-link").innerHTML = newHTML;
+
+    if(data.epic != null && data.epic !== "") {
+        newHTML = '<a href="' + data.epic + '" target="_blank"><img src="../../images/epic-game-store.png" alt="epic Store"></a>';
+    } else {
+        document.getElementById("id-epic-link").classList.add("visually-hidden");
+    }
+    document.getElementById("id-epic-link").innerHTML = newHTML;
+
+    if(data.gog != null && data.gog !== "") {
+        newHTML = '<a href="' + data.gog + '" target="_blank"><img src="../../images/gog-game-store.webp" alt="gog Store"></a>';
+    } else {
+        document.getElementById("id-gog-link").classList.add("visually-hidden");
+    }
+    document.getElementById("id-gog-link").innerHTML = newHTML;
+
+    data.about = data.about.replaceAll("\n", "\n\n")
     document.getElementById("id-game-about-span").innerText = data.about;
 }

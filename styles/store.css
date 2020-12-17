@@ -64,18 +64,26 @@
     justify-content: flex-end;
 }
 
-.carousel-side-bar-item{
+.carousel-side-bar-item {
     display: flex;
     flex-direction: row;
     align-items: center;
     width: 100%;
 }
 
+.carousel-side-bar-item a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+}
+
 .carousel-side-bar-item:hover {
     background-color: var(--bg-tertiary);
 }
 
-.carousel-side-bar-item img{
+.carousel-side-bar-item img {
     height: 85px;
     margin-top: 1rem;
     margin-right: 1rem;
@@ -83,7 +91,7 @@
     margin-bottom: 1rem;
 }
 
-.carousel-side-bar-item p span {
+.carousel-side-bar-item p, .carousel-side-bar-item p span {
     font-size: 14px;
     font-weight: 400;
     display: block;

@@ -53,6 +53,7 @@ main {
     background-color: var(--bg-secondary);
     transition: width var(--transition-speed) ease;
     overflow: none;
+    z-index: 1000;
 }
 
 .custom-navbar-nav {
@@ -192,6 +193,8 @@ main {
     width: 2.5rem;
     text-align: center;
     background-color: var(--bg-secondary);
+    margin-right: 3rem;
+    margin-top: 1rem;
 }
 
 #user-icon img{
@@ -206,6 +209,7 @@ main {
     width: 2.5rem;
     text-align: center;
     background-color: var(--bg-secondary);
+    margin-top: 1rem;
 }
 
 #language-icon svg{
@@ -263,7 +267,7 @@ main {
     }
 
     .custom-navbar-nav li:nth-child(7), .custom-navbar-nav li:nth-child(8), .custom-navbar-nav li:nth-child(9), 
-    .custom-navbar-nav li:nth-child(10), .custom-nav-line-break {
+    .custom-navbar-nav li:nth-child(10), .custom-nav-line-break, .carousel-side-bar{
         display: none;
     }
 

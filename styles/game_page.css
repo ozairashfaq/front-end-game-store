@@ -75,7 +75,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 20rem;
+    width: 30rem;
+    max-width: 30rem;
 }
 
 .div-add-to-lib button{
@@ -83,6 +84,7 @@
     height: 3rem;
     margin-top: 1rem;
     background-color: var(--theme-primary);
+    color: var(--bg-primary);
 }
 
 .div-add-to-lib button:hover{
@@ -146,4 +148,84 @@
     margin-bottom: 0.5rem;
     width: 90%;
     word-wrap: break-word;
+}
+
+.div-go-to-source {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.div-go-to-source img{
+    width: 5rem;
+    height: 5rem;
+}
+
+.div-ratings {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 40%;
+}
+
+.div-ratings span {
+    color: var(--theme-secondary);
+}
+
+.review-stat {
+    font-size: 20px;
+}
+
+#id-review-rating, #id-review-value {
+    color: var(--text-primary);
+}
+
+.modal-content {
+    background-color: var(--bg-primary);
+}
+
+.modal-body::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+.modal-body::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+    background: var(--theme-secondary);
+}
+
+.checkout_buttons {
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.btn-complete-checkout, .btn-cancel-checkout {
+    margin-left: 1rem;
+    background-color: var(--theme-secondary) !important;
+    font-size: 16px !important;
+    border: 0;
+}
+
+.btn-buy-done {
+    margin-top: 2rem;
+    width: 100%;
+    border: 0;
+}
+
+.game-buy-succ {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 10rem;
+    width: 10rem;
+    margin: auto;
+    color: var(--theme-primary);
 }
