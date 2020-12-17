@@ -9,7 +9,7 @@ $(document).ready(function()
 {
     var nav_style = getComputedStyle(document.body);
     let owned_games = JSON.parse(localStorage.getItem("owned_games"));
-    if (owned_games.includes(game_data[game_name].name)) {
+    if (owned_games.includes(game_name)) {
         document.getElementById("btn-add-to-lib").disabled = true;
         document.getElementById("btn-add-to-lib").innerText = "Already in Library";
     }
@@ -22,7 +22,7 @@ $(document).ready(function()
         document.getElementById("buy-game-modal-done").classList.remove("visually-hidden");
         document.getElementById("btn-add-to-lib").disabled = true;
         document.getElementById("btn-add-to-lib").innerText = "Already in Library";
-        owned_games.push(game_data[game_name].name);
+        owned_games.push(game_name);
         // Store
         localStorage.setItem("owned_games", JSON.stringify(owned_games));
     };
@@ -36,7 +36,12 @@ function create_game_page(data) {
     document.getElementById("id-game-title").innerText = data.name;
     document.getElementById("game-logo").setAttribute("src", data.img_src);
     document.getElementById("game-description").innerText = data.desciption;
-    document.getElementById("game-price").innerText = "CA $" + data.price;
+
+    if (data.price === "Free to Play") {
+        document.getElementById("game-price").innerText = data.price;
+    } else {
+        document.getElementById("game-price").innerText = "CA $" + data.price;
+    }
 
     document.getElementById("id-trailer-video").innerHTML = '<source src="' + data.trailer_src + '">';
 

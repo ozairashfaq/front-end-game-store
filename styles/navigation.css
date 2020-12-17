@@ -70,10 +70,6 @@ main {
     width: 100%;
 }
 
-.custom-nav-item:last-child {
-    margin-top: auto;
-}
-
 .custom-nav-line-break {
     width: 50%;
     border: 0.5px solid var(--text-primary);

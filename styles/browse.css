@@ -280,3 +280,7 @@ a {
 .narrow-by-tag .fa{
     margin-left: 0.5rem;
 }
+
+#filter-start-btn, #filter-clear-btn{
+    background-color: var(--theme-secondary);
+}
