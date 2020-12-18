@@ -421,7 +421,7 @@ var game_data = {
     "rocket-league": {
         img_src: "https://cdn.cloudflare.steamstatic.com/steam/apps/252950/capsule_184x69.jpg?t=1607530214",
         name: "Rocket League",
-        price: "Free-to-Play",
+        price: "Free to Play",
         delux_name: "",
         delux_price: "",
         tags: "Co-op, Multiplayer, Single Player",

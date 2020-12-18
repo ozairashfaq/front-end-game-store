@@ -6,6 +6,7 @@ $(document).ready(function()
         document.getElementById("games-owned").innerText = "Total Games: " + owned_games.length;
         document.getElementById("id-no-games-msg").classList.add("visually-hidden");
         let num = getRandomInt(owned_games.length);
+        console.log(owned_games[num]);
         let bg_img = game_data[owned_games[num]].images[getRandomInt(game_data[owned_games[num]].images.length)];
         document.getElementById("user-profile").style.backgroundImage = 'url("' + bg_img + '")';
     }
