@@ -26,6 +26,18 @@ $(document).ready(function()
         // Store
         localStorage.setItem("owned_games", JSON.stringify(owned_games));
     };
+
+    document.getElementById("search-input").onkeyup = function(e) {
+        e.preventDefault();
+        if (e.key === "Enter") {
+            document.getElementById("search-btn").click();
+        }
+    }
+
+    document.getElementById("search-btn").onclick = function(e) {
+        e.preventDefault();
+        window.location = "../browse.html?search=true&search_input=" + document.getElementById("search-input").value;
+    }
 });
 
 function create_game_page(data) {

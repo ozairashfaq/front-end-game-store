@@ -11,6 +11,18 @@ $(document).ready(function()
         document.getElementById("user-profile").style.backgroundImage = 'url("' + bg_img + '")';
     }
     populate_games_list(owned_games);
+
+    document.getElementById("search-input").onkeyup = function(e) {
+        e.preventDefault();
+        if (e.key === "Enter") {
+            document.getElementById("search-btn").click();
+        }
+    }
+
+    document.getElementById("search-btn").onclick = function(e) {
+        e.preventDefault();
+        window.location = "./browse.html?search=true&search_input=" + document.getElementById("search-input").value;
+    }
 });
 
 function getRandomInt(max) {

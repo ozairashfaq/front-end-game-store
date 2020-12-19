@@ -180,6 +180,14 @@ main {
     margin-left: auto;
 }
 
+#search-btn-div {
+    margin-top: 1.5rem;
+}
+
+#search-btn-div {
+    margin-top: 1.5rem;
+}
+
 #user-icon {
     border-radius: 50%;
     border-color: var(--text-primary);

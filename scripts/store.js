@@ -40,4 +40,16 @@ $(document).ready(function()
         e.preventDefault();
         $("#carouselControls").carousel(4);
     }
+
+    document.getElementById("search-input").onkeyup = function(e) {
+        e.preventDefault();
+        if (e.key === "Enter") {
+            document.getElementById("search-btn").click();
+        }
+    }
+
+    document.getElementById("search-btn").onclick = function(e) {
+        e.preventDefault();
+        window.location = "./pages/browse.html?search=true&search_input=" + document.getElementById("search-input").value;
+    }
 });

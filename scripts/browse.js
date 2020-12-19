@@ -35,6 +35,16 @@ $(document).ready(function()
         if(document.getElementById("strategy-tag-check").checked) {
             filter_tag.push("Strategy");
         }
+
+        if (document.getElementById("custom-tags-filter-input").value.toLowerCase() !== "all") {
+            let new_tags = document.getElementById("custom-tags-filter-input").value.toLowerCase().split(",");
+            new_tags.forEach(element => {
+                filter_tag.push(element);
+            });
+        } else {
+            filter_tag.push("all");
+        }
+
         if(document.getElementById("windows-check").checked) {
             filter_os.push("Windows");
         }
@@ -97,6 +107,18 @@ $(document).ready(function()
         e.preventDefault();
         document.getElementById("price-details").classList.add('visually-hidden');
     }
+
+    document.getElementById("search-input").onkeyup = function(e) {
+        e.preventDefault();
+        if (e.key === "Enter") {
+            document.getElementById("search-btn").click();
+        }
+    }
+
+    document.getElementById("search-btn").onclick = function(e) {
+        e.preventDefault();
+        window.location = "./browse.html?search=true&search_input=" + document.getElementById("search-input").value;
+    }
 });
 
 function set_filter_options(params) {
@@ -137,14 +159,29 @@ function set_filter_options(params) {
         if (!os.includes("Linux")) {
             document.getElementById("linux-check").checked = false;
         }
+
+        let custom_tags = "";
+        tags.forEach(element => {
+            if (element !== "Action" && element !== "Adventure" && element !== "Open World" && element !== "RPG" && element !== "Strategy") {
+                custom_tags = custom_tags + element + ",";
+            }
+        });
+        if (custom_tags !== "") {
+            if (custom_tags.toLowerCase().charAt(custom_tags.trim().length - 1) === ",") {
+                custom_tags = custom_tags.slice(0, -1);
+            }
+            document.getElementById("custom-tags-filter-input").value = custom_tags;
+        }
     }
 }
 
 function populate_top_games(data, num_output, urlParams) {
     let set_filter = urlParams.get("filter");
-    
+    let set_search = urlParams.get("search");
+    let search_input = "";
+
     let max_price = 120;
-    let allowed_tags = ["Action","Adventure","Open%20World","RPG","Strategy"];
+    let allowed_tags = ["Action","Adventure","Open World","RPG","Strategy"];
     let allowed_os = ["Windows","Mac","Linux"];
     let no_free = false;
     if (set_filter === "true") {
@@ -152,19 +189,34 @@ function populate_top_games(data, num_output, urlParams) {
         if (urlParams.get("no_free") === "true") {
             no_free = true;
         }
-        allowed_tags = JSON.parse(urlParams.get("tags"));
+        allowed_tags = new Array();
+        tmp_tags = JSON.parse(urlParams.get("tags").toLowerCase());
+        tmp_tags.forEach(element => {
+            allowed_tags.push(element.trim().toLowerCase());
+        });
         allowed_os = JSON.parse(urlParams.get("os"));
 
         if (allowed_os.length == 0) {
             return;
         }
     }
+
+    if (set_search === "true") {
+        search_input = urlParams.get("search_input");
+    }
+
     let gotonext = false;
     let good_os = "";
     let new_html = "";
     let temp_arr = new Array();
     for (i in data) {
         gotonext = false;
+        if (set_search === "true") {
+            if (!((data[i].name).toLowerCase().includes(search_input.toLowerCase()))) {
+                continue;
+            }
+        }
+        
         let curr_os = new Array();
         if (data[i].win == "True" || data[i].mac == "True" || data[i].linux == "True"){
             good_os = "<div class=\"browse-game-os\">";
@@ -182,34 +234,38 @@ function populate_top_games(data, num_output, urlParams) {
             }
             good_os = good_os + "</div>";
         }
-        let num_match = 0;
-        curr_os.forEach(element => {
-            if (allowed_os.includes(element)) {
-                num_match++;
-            }
-        });
-
-        if(num_match === 0) {
-            continue;
-        }
 
         let price = data[i].price;
-        if (no_free === true && price.trim() === "Free to Play") {
-            continue;
-        }
-        if (!(price.trim() === "Free to Play") && parseFloat(price) > max_price){
-            continue;
-        }
-
-        num_match = 0;
-        let curr_tags = data[i].tags.split(",");
-        curr_tags.forEach(element => {
-            if (allowed_tags.includes(element.trim())) {
-                num_match++;
+        if (set_filter === "true") {
+            let num_match = 0;
+            curr_os.forEach(element => {
+                if (allowed_os.includes(element)) {
+                    num_match++;
+                }
+            });
+            
+            if(num_match === 0) {
+                continue;
             }
-        });
-        if(num_match === 0) {
-            continue;
+            
+            if (no_free === true && price.trim() === "Free to Play") {
+                continue;
+            }
+            if (!(price.trim() === "Free to Play") && parseFloat(price) > max_price){
+                continue;
+            }
+            
+            num_match = 0;
+            let curr_tags = data[i].tags.split(",");
+            curr_tags.forEach(element => {
+                if (allowed_tags.includes(element.trim().toLowerCase())) {
+                    num_match++;
+                }
+            });
+            console.log(data[i].name);
+            if(num_match === 0 && !allowed_tags.includes("all")) {
+                continue;
+            }
         }
 
         let page_link = (data[i].name).toLowerCase().replaceAll("'", "").replaceAll("’", "").replaceAll(" ", "-").replaceAll("™", "").replaceAll("®", "").replaceAll(":", "");
@@ -222,7 +278,6 @@ function populate_top_games(data, num_output, urlParams) {
         temp_arr.push(new_html);
         new_html = "";
     }
-    console.log(temp_arr);
     shuffle(temp_arr);
     for(i = 0; i < temp_arr.length; i++) {
         new_html = new_html + temp_arr[i];
